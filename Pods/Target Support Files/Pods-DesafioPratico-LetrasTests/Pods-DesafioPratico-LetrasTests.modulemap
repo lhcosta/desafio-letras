@@ -1,0 +1,6 @@
+framework module Pods_DesafioPratico_LetrasTests {
+  umbrella header "Pods-DesafioPratico-LetrasTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

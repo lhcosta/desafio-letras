@@ -1,0 +1,884 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		97214B8F8ECE75759B9B4ACF /* Pods_DesafioPratico_LetrasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B09EE07A8C7A9BFCA3FFFB /* Pods_DesafioPratico_LetrasTests.framework */; };
+		A40D1C67256949B700D8672A /* GameViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1C66256949B700D8672A /* GameViewSpec.swift */; };
+		A40D1C7425694C5B00D8672A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1C7325694C5B00D8672A /* GameViewController.swift */; };
+		A40D1C7B25694CD000D8672A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1C7A25694CD000D8672A /* Coordinator.swift */; };
+		A40D1C8225694D2B00D8672A /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1C8125694D2B00D8672A /* HomeCoordinator.swift */; };
+		A40D1C8725694ED900D8672A /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1C8625694ED900D8672A /* GameCoordinator.swift */; };
+		A40D1C932569628400D8672A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1C922569628400D8672A /* DataService.swift */; };
+		A40D1C972569630900D8672A /* JSONFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1C962569630900D8672A /* JSONFiles.swift */; };
+		A40D1CA12569656A00D8672A /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CA02569656A00D8672A /* DataServiceTests.swift */; };
+		A40D1CBB2569827900D8672A /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CBA2569827900D8672A /* StringExtensionsTests.swift */; };
+		A40D1CC025698AFB00D8672A /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CBF25698AFB00D8672A /* String+Extensions.swift */; };
+		A40D1CC525698B9100D8672A /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CC425698B9100D8672A /* GameViewModel.swift */; };
+		A40D1CCC25698BCB00D8672A /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CCB25698BCB00D8672A /* Answer.swift */; };
+		A40D1CD325698F9000D8672A /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CD225698F9000D8672A /* GameService.swift */; };
+		A40D1CD92569964800D8672A /* Letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CD82569964700D8672A /* Letters.swift */; };
+		A40D1CDE25699B9900D8672A /* GameServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CDD25699B9900D8672A /* GameServicesTests.swift */; };
+		A40D1CE42569A22400D8672A /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CE32569A22400D8672A /* Words.swift */; };
+		A40D1CFE256AD20F00D8672A /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CFD256AD20E00D8672A /* KeyboardManager.swift */; };
+		A42FCF512567E19200547200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCF502567E19200547200 /* AppDelegate.swift */; };
+		A42FCF532567E19200547200 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCF522567E19200547200 /* SceneDelegate.swift */; };
+		A42FCF5A2567E19500547200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A42FCF592567E19500547200 /* Assets.xcassets */; };
+		A42FCF5D2567E19500547200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42FCF5B2567E19500547200 /* LaunchScreen.storyboard */; };
+		A42FCF672567E1C500547200 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCF662567E1C500547200 /* HomeView.swift */; };
+		A42FCF6C2567E1F000547200 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCF6B2567E1F000547200 /* ViewCodable.swift */; };
+		A42FCF702567E5B500547200 /* InputLettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCF6F2567E5B500547200 /* InputLettersView.swift */; };
+		A42FCF782567E93500547200 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCF772567E93500547200 /* HomeViewController.swift */; };
+		A42FCF872568019600547200 /* letters.json in Resources */ = {isa = PBXBuildFile; fileRef = A42FCF862568019600547200 /* letters.json */; };
+		A42FCF8A256801E500547200 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = A42FCF89256801E500547200 /* words.json */; };
+		A42FCF942568044A00547200 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCF932568044A00547200 /* GameView.swift */; };
+		A42FCF982568067000547200 /* LetterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCF972568067000547200 /* LetterLabel.swift */; };
+		A42FCFA22568087000547200 /* DesafioPratico_LetrasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCFA12568087000547200 /* DesafioPratico_LetrasTests.swift */; };
+		A42FCFBE2568096100547200 /* LetterLabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCFBD2568096100547200 /* LetterLabelSpec.swift */; };
+		A42FCFC825680B7500547200 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = A42FCFC725680B7500547200 /* ReferenceImages */; };
+		A42FCFCE25680C8B00547200 /* LettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCFCD25680C8B00547200 /* LettersView.swift */; };
+		A42FCFD225680EDE00547200 /* LettersViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCFD125680EDE00547200 /* LettersViewSpec.swift */; };
+		E583D8C8067EF6DF8D060EF3 /* Pods_DesafioPratico_Letras.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5822F44A2CED4A9D373BE1AE /* Pods_DesafioPratico_Letras.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A42FCFA42568087000547200 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A42FCF452567E19200547200 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A42FCF4C2567E19200547200;
+			remoteInfo = "DesafioPratico-Letras";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04761F0EDE70DC91E94F565C /* Pods-DesafioPratico-LetrasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPratico-LetrasTests.release.xcconfig"; path = "Target Support Files/Pods-DesafioPratico-LetrasTests/Pods-DesafioPratico-LetrasTests.release.xcconfig"; sourceTree = "<group>"; };
+		242DB4A8C46CFC6DF2435627 /* Pods-DesafioPratico-LetrasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPratico-LetrasTests.debug.xcconfig"; path = "Target Support Files/Pods-DesafioPratico-LetrasTests/Pods-DesafioPratico-LetrasTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5822F44A2CED4A9D373BE1AE /* Pods_DesafioPratico_Letras.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioPratico_Letras.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B09EE07A8C7A9BFCA3FFFB /* Pods_DesafioPratico_LetrasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioPratico_LetrasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8866F0A2AE02B5904320D0C8 /* Pods-DesafioPratico-Letras.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPratico-Letras.debug.xcconfig"; path = "Target Support Files/Pods-DesafioPratico-Letras/Pods-DesafioPratico-Letras.debug.xcconfig"; sourceTree = "<group>"; };
+		A40D1C66256949B700D8672A /* GameViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewSpec.swift; sourceTree = "<group>"; };
+		A40D1C7325694C5B00D8672A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A40D1C7A25694CD000D8672A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A40D1C8125694D2B00D8672A /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		A40D1C8625694ED900D8672A /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
+		A40D1C922569628400D8672A /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		A40D1C962569630900D8672A /* JSONFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFiles.swift; sourceTree = "<group>"; };
+		A40D1CA02569656A00D8672A /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
+		A40D1CBA2569827900D8672A /* StringExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
+		A40D1CBF25698AFB00D8672A /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		A40D1CC425698B9100D8672A /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		A40D1CCB25698BCB00D8672A /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		A40D1CD225698F9000D8672A /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		A40D1CD82569964700D8672A /* Letters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letters.swift; sourceTree = "<group>"; };
+		A40D1CDD25699B9900D8672A /* GameServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameServicesTests.swift; sourceTree = "<group>"; };
+		A40D1CE32569A22400D8672A /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
+		A40D1CFD256AD20E00D8672A /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		A42FCF4D2567E19200547200 /* DesafioPratico-Letras.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DesafioPratico-Letras.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A42FCF502567E19200547200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A42FCF522567E19200547200 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A42FCF592567E19500547200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A42FCF5C2567E19500547200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A42FCF5E2567E19500547200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A42FCF662567E1C500547200 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A42FCF6B2567E1F000547200 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		A42FCF6F2567E5B500547200 /* InputLettersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLettersView.swift; sourceTree = "<group>"; };
+		A42FCF772567E93500547200 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A42FCF862568019600547200 /* letters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = letters.json; sourceTree = "<group>"; };
+		A42FCF89256801E500547200 /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		A42FCF932568044A00547200 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		A42FCF972568067000547200 /* LetterLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterLabel.swift; sourceTree = "<group>"; };
+		A42FCF9F2568087000547200 /* DesafioPratico-LetrasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DesafioPratico-LetrasTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A42FCFA12568087000547200 /* DesafioPratico_LetrasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioPratico_LetrasTests.swift; sourceTree = "<group>"; };
+		A42FCFA32568087000547200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A42FCFBD2568096100547200 /* LetterLabelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterLabelSpec.swift; sourceTree = "<group>"; };
+		A42FCFC725680B7500547200 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
+		A42FCFCD25680C8B00547200 /* LettersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersView.swift; sourceTree = "<group>"; };
+		A42FCFD125680EDE00547200 /* LettersViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersViewSpec.swift; sourceTree = "<group>"; };
+		AC5E33310F80C365A5E42BAE /* Pods-DesafioPratico-Letras.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPratico-Letras.release.xcconfig"; path = "Target Support Files/Pods-DesafioPratico-Letras/Pods-DesafioPratico-Letras.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A42FCF4A2567E19200547200 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E583D8C8067EF6DF8D060EF3 /* Pods_DesafioPratico_Letras.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A42FCF9C2568087000547200 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97214B8F8ECE75759B9B4ACF /* Pods_DesafioPratico_LetrasTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4642532E1C57682EE09A0770 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5822F44A2CED4A9D373BE1AE /* Pods_DesafioPratico_Letras.framework */,
+				80B09EE07A8C7A9BFCA3FFFB /* Pods_DesafioPratico_LetrasTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A40D1C7225694C4500D8672A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1C7325694C5B00D8672A /* GameViewController.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		A40D1C7925694CC400D8672A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1C8C25694F7000D8672A /* Protocol */,
+				A40D1C8525694ECF00D8672A /* Game */,
+				A40D1C8025694D2000D8672A /* Home */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A40D1C8025694D2000D8672A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1C8125694D2B00D8672A /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A40D1C8525694ECF00D8672A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1C8625694ED900D8672A /* GameCoordinator.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		A40D1C8C25694F7000D8672A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1C7A25694CD000D8672A /* Coordinator.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A40D1C8F256950CA00D8672A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCF502567E19200547200 /* AppDelegate.swift */,
+				A42FCF522567E19200547200 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A40D1C9A2569640300D8672A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1CCB25698BCB00D8672A /* Answer.swift */,
+				A40D1CD82569964700D8672A /* Letters.swift */,
+				A40D1CE32569A22400D8672A /* Words.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A40D1C9F2569655400D8672A /* StorageLayer */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1CA02569656A00D8672A /* DataServiceTests.swift */,
+			);
+			path = StorageLayer;
+			sourceTree = "<group>";
+		};
+		A40D1CB12569824300D8672A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1CBA2569827900D8672A /* StringExtensionsTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A40D1CBE25698AE800D8672A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1CBF25698AFB00D8672A /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A40D1CC325698B8200D8672A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1CCA25698B9700D8672A /* Game */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A40D1CCA25698B9700D8672A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1CC425698B9100D8672A /* GameViewModel.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		A40D1CD125698F8100D8672A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1CD225698F9000D8672A /* GameService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A40D1CDC25699B8800D8672A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1CDD25699B9900D8672A /* GameServicesTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A42FCF442567E19200547200 = {
+			isa = PBXGroup;
+			children = (
+				A42FCF4F2567E19200547200 /* DesafioPratico-Letras */,
+				A42FCFA02568087000547200 /* DesafioPratico-LetrasTests */,
+				A42FCF4E2567E19200547200 /* Products */,
+				D5A25B7A20C93B9EDED8D8E0 /* Pods */,
+				4642532E1C57682EE09A0770 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A42FCF4E2567E19200547200 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCF4D2567E19200547200 /* DesafioPratico-Letras.app */,
+				A42FCF9F2568087000547200 /* DesafioPratico-LetrasTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A42FCF4F2567E19200547200 /* DesafioPratico-Letras */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCF5E2567E19500547200 /* Info.plist */,
+				A42FCF592567E19500547200 /* Assets.xcassets */,
+				A40D1C8F256950CA00D8672A /* Application */,
+				A40D1C7925694CC400D8672A /* Coordinator */,
+				A40D1CBE25698AE800D8672A /* Extensions */,
+				A42FCF7B2567FE8700547200 /* Helpers */,
+				A42FCF5B2567E19500547200 /* LaunchScreen.storyboard */,
+				A40D1C9A2569640300D8672A /* Model */,
+				A40D1CD125698F8100D8672A /* Services */,
+				A42FCF8C2568025500547200 /* StorageLayer */,
+				A42FCF762567E92300547200 /* ViewControllers */,
+				A40D1CC325698B8200D8672A /* ViewModel */,
+				A42FCF652567E1B000547200 /* Views */,
+			);
+			path = "DesafioPratico-Letras";
+			sourceTree = "<group>";
+		};
+		A42FCF652567E1B000547200 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCF91256803FD00547200 /* GameView */,
+				A42FCF90256803E500547200 /* HomeView */,
+				A42FCF6E2567E59200547200 /* Subviews */,
+				A42FCF6A2567E1E000547200 /* Protocol */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A42FCF6A2567E1E000547200 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCF6B2567E1F000547200 /* ViewCodable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A42FCF6E2567E59200547200 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCF6F2567E5B500547200 /* InputLettersView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		A42FCF762567E92300547200 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1C7225694C4500D8672A /* Game */,
+				A42FCF802567FFE700547200 /* Home */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A42FCF7B2567FE8700547200 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1CFD256AD20E00D8672A /* KeyboardManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A42FCF802567FFE700547200 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCF772567E93500547200 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A42FCF8C2568025500547200 /* StorageLayer */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCF862568019600547200 /* letters.json */,
+				A42FCF89256801E500547200 /* words.json */,
+				A40D1C922569628400D8672A /* DataService.swift */,
+				A40D1C962569630900D8672A /* JSONFiles.swift */,
+			);
+			path = StorageLayer;
+			sourceTree = "<group>";
+		};
+		A42FCF90256803E500547200 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCF662567E1C500547200 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		A42FCF91256803FD00547200 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCF962568066200547200 /* Subviews */,
+				A42FCF932568044A00547200 /* GameView.swift */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		A42FCF962568066200547200 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCF972568067000547200 /* LetterLabel.swift */,
+				A42FCFCD25680C8B00547200 /* LettersView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		A42FCFA02568087000547200 /* DesafioPratico-LetrasTests */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1CDC25699B8800D8672A /* Services */,
+				A40D1CB12569824300D8672A /* Extensions */,
+				A40D1C9F2569655400D8672A /* StorageLayer */,
+				A42FCFC725680B7500547200 /* ReferenceImages */,
+				A42FCFB52568094300547200 /* ViewSpec */,
+				A42FCFA12568087000547200 /* DesafioPratico_LetrasTests.swift */,
+				A42FCFA32568087000547200 /* Info.plist */,
+			);
+			path = "DesafioPratico-LetrasTests";
+			sourceTree = "<group>";
+		};
+		A42FCFB52568094300547200 /* ViewSpec */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCFB82568094E00547200 /* GameView */,
+			);
+			path = ViewSpec;
+			sourceTree = "<group>";
+		};
+		A42FCFB82568094E00547200 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				A42FCFBD2568096100547200 /* LetterLabelSpec.swift */,
+				A42FCFD125680EDE00547200 /* LettersViewSpec.swift */,
+				A40D1C66256949B700D8672A /* GameViewSpec.swift */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		D5A25B7A20C93B9EDED8D8E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8866F0A2AE02B5904320D0C8 /* Pods-DesafioPratico-Letras.debug.xcconfig */,
+				AC5E33310F80C365A5E42BAE /* Pods-DesafioPratico-Letras.release.xcconfig */,
+				242DB4A8C46CFC6DF2435627 /* Pods-DesafioPratico-LetrasTests.debug.xcconfig */,
+				04761F0EDE70DC91E94F565C /* Pods-DesafioPratico-LetrasTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A42FCF4C2567E19200547200 /* DesafioPratico-Letras */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A42FCF612567E19500547200 /* Build configuration list for PBXNativeTarget "DesafioPratico-Letras" */;
+			buildPhases = (
+				4E9014CCAAF47E0DFFD7B7D8 /* [CP] Check Pods Manifest.lock */,
+				A42FCF492567E19200547200 /* Sources */,
+				A42FCF4A2567E19200547200 /* Frameworks */,
+				A42FCF4B2567E19200547200 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DesafioPratico-Letras";
+			productName = "DesafioPratico-Letras";
+			productReference = A42FCF4D2567E19200547200 /* DesafioPratico-Letras.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A42FCF9E2568087000547200 /* DesafioPratico-LetrasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A42FCFA62568087000547200 /* Build configuration list for PBXNativeTarget "DesafioPratico-LetrasTests" */;
+			buildPhases = (
+				2BE022956EFF31FF8FB471D5 /* [CP] Check Pods Manifest.lock */,
+				A42FCF9B2568087000547200 /* Sources */,
+				A42FCF9C2568087000547200 /* Frameworks */,
+				A42FCF9D2568087000547200 /* Resources */,
+				D1D3D42B60FAABA133B85665 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A42FCFA52568087000547200 /* PBXTargetDependency */,
+			);
+			name = "DesafioPratico-LetrasTests";
+			productName = "DesafioPratico-LetrasTests";
+			productReference = A42FCF9F2568087000547200 /* DesafioPratico-LetrasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A42FCF452567E19200547200 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					A42FCF4C2567E19200547200 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					A42FCF9E2568087000547200 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = A42FCF4C2567E19200547200;
+					};
+				};
+			};
+			buildConfigurationList = A42FCF482567E19200547200 /* Build configuration list for PBXProject "DesafioPratico-Letras" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A42FCF442567E19200547200;
+			productRefGroup = A42FCF4E2567E19200547200 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A42FCF4C2567E19200547200 /* DesafioPratico-Letras */,
+				A42FCF9E2568087000547200 /* DesafioPratico-LetrasTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A42FCF4B2567E19200547200 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A42FCF5D2567E19500547200 /* LaunchScreen.storyboard in Resources */,
+				A42FCF5A2567E19500547200 /* Assets.xcassets in Resources */,
+				A42FCF872568019600547200 /* letters.json in Resources */,
+				A42FCF8A256801E500547200 /* words.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A42FCF9D2568087000547200 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A42FCFC825680B7500547200 /* ReferenceImages in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BE022956EFF31FF8FB471D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesafioPratico-LetrasTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E9014CCAAF47E0DFFD7B7D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesafioPratico-Letras-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1D3D42B60FAABA133B85665 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesafioPratico-LetrasTests/Pods-DesafioPratico-LetrasTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesafioPratico-LetrasTests/Pods-DesafioPratico-LetrasTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesafioPratico-LetrasTests/Pods-DesafioPratico-LetrasTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A42FCF492567E19200547200 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A40D1C7425694C5B00D8672A /* GameViewController.swift in Sources */,
+				A40D1C972569630900D8672A /* JSONFiles.swift in Sources */,
+				A40D1C7B25694CD000D8672A /* Coordinator.swift in Sources */,
+				A42FCF6C2567E1F000547200 /* ViewCodable.swift in Sources */,
+				A40D1CCC25698BCB00D8672A /* Answer.swift in Sources */,
+				A42FCF672567E1C500547200 /* HomeView.swift in Sources */,
+				A40D1CC525698B9100D8672A /* GameViewModel.swift in Sources */,
+				A42FCF942568044A00547200 /* GameView.swift in Sources */,
+				A40D1CFE256AD20F00D8672A /* KeyboardManager.swift in Sources */,
+				A42FCF512567E19200547200 /* AppDelegate.swift in Sources */,
+				A40D1CD325698F9000D8672A /* GameService.swift in Sources */,
+				A40D1C932569628400D8672A /* DataService.swift in Sources */,
+				A40D1CC025698AFB00D8672A /* String+Extensions.swift in Sources */,
+				A42FCF702567E5B500547200 /* InputLettersView.swift in Sources */,
+				A42FCF782567E93500547200 /* HomeViewController.swift in Sources */,
+				A42FCF982568067000547200 /* LetterLabel.swift in Sources */,
+				A40D1CD92569964800D8672A /* Letters.swift in Sources */,
+				A40D1C8225694D2B00D8672A /* HomeCoordinator.swift in Sources */,
+				A42FCFCE25680C8B00547200 /* LettersView.swift in Sources */,
+				A40D1CE42569A22400D8672A /* Words.swift in Sources */,
+				A40D1C8725694ED900D8672A /* GameCoordinator.swift in Sources */,
+				A42FCF532567E19200547200 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A42FCF9B2568087000547200 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A40D1CDE25699B9900D8672A /* GameServicesTests.swift in Sources */,
+				A40D1CA12569656A00D8672A /* DataServiceTests.swift in Sources */,
+				A40D1CBB2569827900D8672A /* StringExtensionsTests.swift in Sources */,
+				A42FCFA22568087000547200 /* DesafioPratico_LetrasTests.swift in Sources */,
+				A40D1C67256949B700D8672A /* GameViewSpec.swift in Sources */,
+				A42FCFBE2568096100547200 /* LetterLabelSpec.swift in Sources */,
+				A42FCFD225680EDE00547200 /* LettersViewSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A42FCFA52568087000547200 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A42FCF4C2567E19200547200 /* DesafioPratico-Letras */;
+			targetProxy = A42FCFA42568087000547200 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A42FCF5B2567E19500547200 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A42FCF5C2567E19500547200 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A42FCF5F2567E19500547200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A42FCF602567E19500547200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A42FCF622567E19500547200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8866F0A2AE02B5904320D0C8 /* Pods-DesafioPratico-Letras.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3H798M6N3T;
+				INFOPLIST_FILE = "DesafioPratico-Letras/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucascosta.DesafioPratico-Letras";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A42FCF632567E19500547200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC5E33310F80C365A5E42BAE /* Pods-DesafioPratico-Letras.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3H798M6N3T;
+				INFOPLIST_FILE = "DesafioPratico-Letras/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucascosta.DesafioPratico-Letras";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A42FCFA72568087000547200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 242DB4A8C46CFC6DF2435627 /* Pods-DesafioPratico-LetrasTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3H798M6N3T;
+				INFOPLIST_FILE = "DesafioPratico-LetrasTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucascosta.DesafioPratico-LetrasTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesafioPratico-Letras.app/DesafioPratico-Letras";
+			};
+			name = Debug;
+		};
+		A42FCFA82568087000547200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04761F0EDE70DC91E94F565C /* Pods-DesafioPratico-LetrasTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3H798M6N3T;
+				INFOPLIST_FILE = "DesafioPratico-LetrasTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucascosta.DesafioPratico-LetrasTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesafioPratico-Letras.app/DesafioPratico-Letras";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A42FCF482567E19200547200 /* Build configuration list for PBXProject "DesafioPratico-Letras" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A42FCF5F2567E19500547200 /* Debug */,
+				A42FCF602567E19500547200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A42FCF612567E19500547200 /* Build configuration list for PBXNativeTarget "DesafioPratico-Letras" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A42FCF622567E19500547200 /* Debug */,
+				A42FCF632567E19500547200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A42FCFA62568087000547200 /* Build configuration list for PBXNativeTarget "DesafioPratico-LetrasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A42FCFA72568087000547200 /* Debug */,
+				A42FCFA82568087000547200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A42FCF452567E19200547200 /* Project object */;
+}
