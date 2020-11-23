@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     weak var coordinator: HomeCoordinator?
-    
+        
     var homeView: HomeView {
         return view as! HomeView
     }

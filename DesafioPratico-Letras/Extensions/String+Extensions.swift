@@ -13,22 +13,28 @@ extension String {
         
         guard string.count >= self.count else { return (false, []) }
         
-        let firstWord = self.uppercased().sorted()
-        let secondWord = string.uppercased().sorted()
-        let difference = firstWord.difference(from: secondWord)
-        
-        let contains = difference.insertions.isEmpty
+        var firstWord = self.uppercased().map { String($0) }
+        var secondWord = string.uppercased().map { String($0) }
+        var contains = false
         var overElements: [String] = []
                 
-        difference.removals.forEach {
-            switch $0 {
-            case .remove(_, let element, _):
-                overElements.append(String(element))
-            default:
+        while firstWord.count <= secondWord.count {
+            
+            let letter = secondWord.removeFirst()
+            
+            if let foundLetter = firstWord.enumerated().first(where: { $0.element == letter }) {
+                firstWord.remove(at: foundLetter.offset)
+            } else {
+                overElements.append(String(letter))
+            }
+            
+            if firstWord.isEmpty {
+                contains.toggle()
                 break
             }
         }
-        
+      
+        overElements.append(contentsOf: secondWord)
         return (contains, overElements)
     }
     
