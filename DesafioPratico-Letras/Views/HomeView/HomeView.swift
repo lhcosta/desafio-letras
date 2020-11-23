@@ -26,7 +26,7 @@ class HomeView: UIView {
     }()
         
     override init(frame: CGRect = .zero) {
-        super.init(frame: .zero)
+        super.init(frame: frame)
         setupViews()
 
     }
@@ -44,7 +44,7 @@ extension HomeView: ViewCodable {
         NSLayoutConstraint.activate([
             inputLettersView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             inputLettersView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            inputLettersView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            inputLettersView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -15),
             text.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             text.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             text.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 90)
