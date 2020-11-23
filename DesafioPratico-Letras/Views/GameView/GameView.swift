@@ -79,7 +79,7 @@ extension GameView: ViewCodable {
         NSLayoutConstraint.activate([
             inputLettersView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             inputLettersView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            inputLettersView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            inputLettersView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -15),
             stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 90),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
