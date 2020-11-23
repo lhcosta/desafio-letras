@@ -26,8 +26,8 @@ class LetterLabel: UILabel {
     func setupConstraints() {
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            widthAnchor.constraint(equalToConstant: 35),
-            heightAnchor.constraint(equalToConstant: 35)
+            widthAnchor.constraint(equalToConstant: 30),
+            heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     

@@ -11,22 +11,16 @@ class GameViewModel {
     
     var word: String
     private(set) var answer: Answer?
-    private let gameService: GameService
+    private let gameService: GameServiceProtocol
     
-    init(word: String, gameService: GameService) {
+    init(word: String, gameService: GameServiceProtocol) {
         self.word = word
         self.gameService = gameService
     }
     
     func fetchAnswer(completion: @escaping () -> Void){
-        gameService.findBestAnswer(word) { [weak self] (result) in
-            switch result {
-            case .success(let result):
-                self?.answer = result
-            case .failure(let error):
-                print("Error to get best answer - \(error)")
-            }
-            
+        gameService.findBestAnswer(word) { [weak self] (answer) in
+            self?.answer = answer
             completion()
         }
     }

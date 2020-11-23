@@ -25,6 +25,7 @@
 		A40D1CDE25699B9900D8672A /* GameServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CDD25699B9900D8672A /* GameServicesTests.swift */; };
 		A40D1CE42569A22400D8672A /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CE32569A22400D8672A /* Words.swift */; };
 		A40D1CFE256AD20F00D8672A /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1CFD256AD20E00D8672A /* KeyboardManager.swift */; };
+		A40D1D13256B1E9600D8672A /* HomeViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D1D12256B1E9600D8672A /* HomeViewSpec.swift */; };
 		A42FCF512567E19200547200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCF502567E19200547200 /* AppDelegate.swift */; };
 		A42FCF532567E19200547200 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCF522567E19200547200 /* SceneDelegate.swift */; };
 		A42FCF5A2567E19500547200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A42FCF592567E19500547200 /* Assets.xcassets */; };
@@ -37,7 +38,6 @@
 		A42FCF8A256801E500547200 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = A42FCF89256801E500547200 /* words.json */; };
 		A42FCF942568044A00547200 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCF932568044A00547200 /* GameView.swift */; };
 		A42FCF982568067000547200 /* LetterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCF972568067000547200 /* LetterLabel.swift */; };
-		A42FCFA22568087000547200 /* DesafioPratico_LetrasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCFA12568087000547200 /* DesafioPratico_LetrasTests.swift */; };
 		A42FCFBE2568096100547200 /* LetterLabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCFBD2568096100547200 /* LetterLabelSpec.swift */; };
 		A42FCFC825680B7500547200 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = A42FCFC725680B7500547200 /* ReferenceImages */; };
 		A42FCFCE25680C8B00547200 /* LettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCFCD25680C8B00547200 /* LettersView.swift */; };
@@ -78,6 +78,7 @@
 		A40D1CDD25699B9900D8672A /* GameServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameServicesTests.swift; sourceTree = "<group>"; };
 		A40D1CE32569A22400D8672A /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		A40D1CFD256AD20E00D8672A /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		A40D1D12256B1E9600D8672A /* HomeViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSpec.swift; sourceTree = "<group>"; };
 		A42FCF4D2567E19200547200 /* DesafioPratico-Letras.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DesafioPratico-Letras.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42FCF502567E19200547200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A42FCF522567E19200547200 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +94,6 @@
 		A42FCF932568044A00547200 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		A42FCF972568067000547200 /* LetterLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterLabel.swift; sourceTree = "<group>"; };
 		A42FCF9F2568087000547200 /* DesafioPratico-LetrasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DesafioPratico-LetrasTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A42FCFA12568087000547200 /* DesafioPratico_LetrasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioPratico_LetrasTests.swift; sourceTree = "<group>"; };
 		A42FCFA32568087000547200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A42FCFBD2568096100547200 /* LetterLabelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterLabelSpec.swift; sourceTree = "<group>"; };
 		A42FCFC725680B7500547200 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
@@ -248,6 +248,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		A40D1D11256B1E8A00D8672A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A40D1D12256B1E9600D8672A /* HomeViewSpec.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		A42FCF442567E19200547200 = {
 			isa = PBXGroup;
 			children = (
@@ -385,7 +393,6 @@
 				A40D1C9F2569655400D8672A /* StorageLayer */,
 				A42FCFC725680B7500547200 /* ReferenceImages */,
 				A42FCFB52568094300547200 /* ViewSpec */,
-				A42FCFA12568087000547200 /* DesafioPratico_LetrasTests.swift */,
 				A42FCFA32568087000547200 /* Info.plist */,
 			);
 			path = "DesafioPratico-LetrasTests";
@@ -394,6 +401,7 @@
 		A42FCFB52568094300547200 /* ViewSpec */ = {
 			isa = PBXGroup;
 			children = (
+				A40D1D11256B1E8A00D8672A /* Home */,
 				A42FCFB82568094E00547200 /* GameView */,
 			);
 			path = ViewSpec;
@@ -621,7 +629,7 @@
 				A40D1CDE25699B9900D8672A /* GameServicesTests.swift in Sources */,
 				A40D1CA12569656A00D8672A /* DataServiceTests.swift in Sources */,
 				A40D1CBB2569827900D8672A /* StringExtensionsTests.swift in Sources */,
-				A42FCFA22568087000547200 /* DesafioPratico_LetrasTests.swift in Sources */,
+				A40D1D13256B1E9600D8672A /* HomeViewSpec.swift in Sources */,
 				A40D1C67256949B700D8672A /* GameViewSpec.swift in Sources */,
 				A42FCFBE2568096100547200 /* LetterLabelSpec.swift in Sources */,
 				A42FCFD225680EDE00547200 /* LettersViewSpec.swift in Sources */,

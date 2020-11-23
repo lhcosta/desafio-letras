@@ -7,57 +7,61 @@
 
 import Foundation
 
-enum GameServiceError: Error {
-    case notFound
-    case calculatePoint
+protocol GameServiceProtocol {
+    func findBestAnswer(_ letters: String, completion: @escaping (Answer?) -> Void)
+    func calculatePointWord(word: String, completion: @escaping (Int) -> Void)
 }
 
-class GameService {
+class GameService: GameServiceProtocol {
     
-    private let dataService: DataService
+    private let dataService: DataServiceProtocol
     private var words: Words?
     private var letters: Letters?
     
-    init(dataService: DataService) {
+    init(dataService: DataServiceProtocol) {
         self.dataService = dataService
     }
     
-    func findBestAnswer(_ letters: String, completion: @escaping (Result<Answer?, Error>) -> Void) {
+    /// Encontrar a melhor palavra de acordo com a letras fornecidas pelo usuário.
+    /// - Parameters:
+    ///   - letters: letras digitadas
+    ///   - completion: resposta válida ou não.
+    func findBestAnswer(_ letters: String, completion: @escaping (Answer?) -> Void) {
         
         var bestAnswer: Answer?
+        let group = DispatchGroup()
+        group.enter()
         
-        dataService.fetch(from: .words, type: Words.self) { (result) in
-            switch result {
-            case .success(let words):
+        if self.words == nil {
+            self.fetchWords { group.leave() }
+        } else {
+            group.leave()
+        }
+        
+        group.notify(queue: .global()) {
+            
+            for word in self.words?.values ?? [] {
                 
-                for word in words.values {
+                let result = word.containsAllLetters(in: letters)
+                
+                if result.contains {
                     
-                    let result = word.containsAllLetters(in: letters)
-                    
-                    if result.contains {
+                    self.calculatePointWord(word: word) { (point) in
                         
-                        self.calculatePointWord(word: word) { (point) in
-                            
-                            if bestAnswer?.point ?? 0 < point {
-                                bestAnswer = Answer(word: word, point: point, overLetters: result.overElements)
-                            } else if bestAnswer?.point ?? 0 == point && word.count < (bestAnswer?.word.count ?? 0) {
+                        if let answer = bestAnswer {
+                            if answer.point < point || (answer.point == point && word.count < answer.word.count)  {
                                 bestAnswer = Answer(word: word, point: point, overLetters: result.overElements)
                             }
-    
+                        } else {
+                            bestAnswer = Answer(word: word, point: point, overLetters: result.overElements)
                         }
-                        
                     }
-                    
                 }
-                
-                completion(.success(bestAnswer))
-            
-            case .failure(let error):
-                completion(.failure(error))
             }
+            
+            completion(bestAnswer)
         }
     }
-    
     
     /// Calculando a pontuação de uma palavra
     /// - Parameters:
@@ -79,8 +83,8 @@ class GameService {
                 }
             }
         }
-        
     }
+    
 }
 
 //MARK:- Private methods
@@ -93,6 +97,21 @@ private extension GameService {
         return word.reduce(0, { point, letter in
             point + (self.letters?.dict[letter.description] ?? 0)
         })
+    }
+    
+    /// Buscando todas as palavras salvas.
+    /// - Parameter completion: busca das palavras concluida.
+    func fetchWords(completion: @escaping () -> Void) {
+        dataService.fetch(from: .words, type: Words.self) { [weak self] result in
+            switch result {
+            case .success(let words):
+                self?.words = words
+            case .failure(let error):
+                print("Error to fetch all words - \(error)")
+            }
+            
+            completion()
+        }
     }
 }
 

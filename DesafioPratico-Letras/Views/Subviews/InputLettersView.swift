@@ -105,13 +105,13 @@ extension InputLettersView: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
+        //Permitindo backspace e letras
+        guard string.isEmpty || string.rangeOfCharacter(from: .letters) != nil else { return false }
+        
         //Permitindo apenas 25 caracteres
         guard let newText = textField.text as NSString?,
               newText.replacingCharacters(in: range, with: string).count <= 25 else { return false }
-        
-        //Permitindo apenas letras e backspace na textfield
-        guard string.range(of: "[\\ba-zA-Z]", options: .regularExpression) != nil else { return false }
-        
+                
         return true
     }
     

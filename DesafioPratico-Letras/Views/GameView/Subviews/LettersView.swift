@@ -17,17 +17,7 @@ class LettersView: UIView {
     
     var letters: String = "" {
         didSet {
-            
-            for view in lettersStackView.arrangedSubviews {
-                lettersStackView.removeArrangedSubview(view)
-                view.removeFromSuperview()
-            }
-            
-            letters.forEach {
-                let letterLabel = LetterLabel()
-                letterLabel.text = String($0)
-                lettersStackView.addArrangedSubview(letterLabel)
-            }
+            createLettersView()
         }
     }
     
@@ -36,17 +26,7 @@ class LettersView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    private let lettersStackView: UIStackView = {
-        let stack = UIStackView(frame: .zero)
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .horizontal
-        stack.spacing = 10
-        stack.alignment = .fill
-        stack.distribution = .fillEqually
-        return stack
-    }()
-    
+        
     private let stackView: UIStackView = {
         let stack = UIStackView(frame: .zero)
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -81,7 +61,64 @@ extension LettersView: ViewCodable {
     
     func setupViewHierarchy() {
         stackView.addArrangedSubview(titleLabel)
-        stackView.addArrangedSubview(lettersStackView)
         addSubview(stackView)
+    }
+}
+
+//MARK:- Private methods
+private extension LettersView {
+    
+    func createLettersView() {
+        //Removendo letras quando atualizar palavra.
+        for view in stackView.arrangedSubviews {
+            if let lettersStackView = view as? LettersStackView {
+                stackView.removeArrangedSubview(lettersStackView)
+                lettersStackView.removeFromSuperview()
+            }
+        }
+        
+        //Calculando o espaço disponível na tela e criando multiplas linhas de letras
+        let availableSpace = UIScreen.main.bounds.size.width
+        let labelPerRow = Int(availableSpace/40)
+        
+        var lettersStackView = LettersStackView()
+        stackView.addArrangedSubview(lettersStackView)
+        
+        var count = 0
+        for letter in letters {
+            
+            let label = LetterLabel()
+            label.text = String(letter)
+            
+            if count < labelPerRow {
+                count += 1
+                lettersStackView.addArrangedSubview(label)
+            } else {
+                count = 0
+                lettersStackView = LettersStackView()
+                lettersStackView.addArrangedSubview(label)
+                stackView.addArrangedSubview(lettersStackView)
+            }
+        }
+    }
+}
+
+//MARK:- NestedTypes
+extension LettersView {
+    
+    class LettersStackView: UIStackView {
+        
+        override init(frame: CGRect = .zero) {
+            super.init(frame: frame)
+            axis = .horizontal
+            spacing = 8
+            alignment = .fill
+            distribution = .fillEqually
+            translatesAutoresizingMaskIntoConstraints = false
+        }
+        
+        required init(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
     }
 }

@@ -22,15 +22,15 @@ class GameViewSpec: QuickSpec {
             context("First State") {
                 beforeEach {
                     sut = GameView(frame: CGRect(origin: .zero, size: CGSize(width: 414, height: 800)))
-                    sut.overLetters = ["A", "B", "E"]
-                    sut.word = "Cavalo".map { $0.uppercased() } as Array
+                    sut.overLetters = "ABE"
+                    sut.word = "CAVALO"
                     sut.point = 20
                     sut.backgroundColor = .white
                 }
                 
                 it("Load View") {
-                    expect(sut).toEventually(recordSnapshot(named: "GameView"))
-//                    expect(sut).toEventually(haveValidSnapshot(named: "GameView"))
+//                    expect(sut).toEventually(recordSnapshot(named: "GameView"))
+                    expect(sut).toEventually(haveValidSnapshot(named: "GameView"))
                 }
             }
         }
