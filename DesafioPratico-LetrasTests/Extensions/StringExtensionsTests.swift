@@ -14,7 +14,7 @@ class StringExtensionsTests: XCTestCase {
     func test_WhenArrayContainsAllElements() {
         
         let word = "Banana"
-        let letters = "bnanaafg"
+        let letters = "bnanafag"
         let overElements = ["F", "G"]
         
         let result = word.containsAllLetters(in: letters)
