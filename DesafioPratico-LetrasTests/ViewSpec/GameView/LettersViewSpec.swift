@@ -21,19 +21,19 @@ class LettersViewSpec: QuickSpec {
             context("First State") {
                 beforeEach {
                     sut = LettersView(frame: CGRect(origin: .zero, size: CGSize(width: 414, height: 100)))
-                    sut.letters = ["A", "B", "C", "D"]
+                    sut.letters = "ABDNCDDL"
                 }
                 
                 it("Word with points") {
                     sut.title = "Palavra de 9 pontos"
-                    expect(sut).toEventually(recordSnapshot(named: "LettersViewSpec_WordWithPoint"))
-//                    expect(sut).toEventually(haveValidSnapshot(named: "LettersViewSpec_WordWithPoint"))
+//                    expect(sut).toEventually(recordSnapshot(named: "LettersViewSpec_WordWithPoint"))
+                    expect(sut).toEventually(haveValidSnapshot(named: "LettersViewSpec_WordWithPoint"))
                 }
                 
                 it("Over Letters") {
                     sut.title = "Sobraram:"
-                    expect(sut).toEventually(recordSnapshot(named: "LettersViewSpec_OverLetters"))
-//                    expect(sut).toEventually(haveValidSnapshot(named: "LettersViewSpec_OverLetters"))
+//                    expect(sut).toEventually(recordSnapshot(named: "LettersViewSpec_OverLetters"))
+                    expect(sut).toEventually(haveValidSnapshot(named: "LettersViewSpec_OverLetters"))
                 }
             }
         }

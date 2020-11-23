@@ -10,7 +10,7 @@ import XCTest
 @testable import DesafioPratico_Letras
 
 class GameServicesTests: XCTestCase {
-
+    
     var sut: GameService!
     
     override func setUp() {
@@ -44,15 +44,9 @@ class GameServicesTests: XCTestCase {
         let answerWord = "DEIXAR"
         let letters = "aeixrdmna"
         let exp = expectation(description: "Find best word")
-
-        sut.findBestAnswer(letters) { (result) in
-            switch result {
-            case .success(let answer):
-                XCTAssertEqual(answer?.word, answerWord)
-            case .failure(let error):
-                XCTFail("Fail to find best word - \(error)")
-            }
-            
+        
+        sut.findBestAnswer(letters) { (answer) in
+            XCTAssertEqual(answer?.word, answerWord)
             exp.fulfill()
         }
         
@@ -66,20 +60,13 @@ class GameServicesTests: XCTestCase {
         let answerWord = "DOR"
         let letters = "dtora"
         let exp = expectation(description: "Find best word")
-
         
-        sut.findBestAnswer(letters) { (result) in
-            switch result {
-            case .success(let answer):
-                XCTAssertEqual(answer?.word, answerWord)
-            case .failure(let error):
-                XCTFail("Fail to find best word - \(error)")
-            }
-            
+        sut.findBestAnswer(letters) { (answer) in
+            XCTAssertEqual(answer?.word, answerWord)
             exp.fulfill()
         }
         
         wait(for: [exp], timeout: 1)
     }
-
+    
 }
