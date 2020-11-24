@@ -24,17 +24,16 @@ class HomeView: UIView {
         input.translatesAutoresizingMaskIntoConstraints = false
         return input
     }()
-        
+    
+    //MARK:- Initialize
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupViews()
-
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
 //MARK:- ViewCodable
@@ -44,7 +43,7 @@ extension HomeView: ViewCodable {
         NSLayoutConstraint.activate([
             inputLettersView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             inputLettersView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            inputLettersView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -15),
+            inputLettersView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10),
             text.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             text.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             text.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 90)
@@ -61,4 +60,3 @@ extension HomeView: ViewCodable {
     }
     
 }
-

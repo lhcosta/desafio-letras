@@ -28,21 +28,21 @@ class GameView: UIView {
     
     var overLetters: String = "" {
         didSet {
+            overLettersView.title = "Sobraram:"
             overLettersView.letters = overLetters
         }
     }
     
     //MARK:- Components
-    private let wordWithPointView: LettersView = {
+    private lazy var wordWithPointView: LettersView = {
        let view = LettersView()
         view.translatesAutoresizingMaskIntoConstraints = false
        return view
     }()
     
-    private let overLettersView: LettersView = {
+    private lazy var overLettersView: LettersView = {
        let view = LettersView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.title = "Sobraram:"
        return view
     }()
     
@@ -79,8 +79,8 @@ extension GameView: ViewCodable {
         NSLayoutConstraint.activate([
             inputLettersView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             inputLettersView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            inputLettersView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -15),
-            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 90),
+            inputLettersView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10),
+            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 70),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])

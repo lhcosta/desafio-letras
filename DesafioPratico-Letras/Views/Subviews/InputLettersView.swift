@@ -9,10 +9,11 @@ import UIKit
 
 class InputLettersView: UIView {
     
+    //MARK:- Closures
     var confirmButtonAction: ((String) -> Void)?
     
     //MARK:- Components
-    private lazy var textField: UITextField = {
+    private(set) lazy var textField: UITextField = {
         let textField = UITextField(frame: .zero)
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Letras"
@@ -20,8 +21,6 @@ class InputLettersView: UIView {
         textField.borderStyle = .roundedRect
         textField.delegate = self
         textField.autocapitalizationType = .none
-        textField.autocorrectionType = .no
-        textField.keyboardType = .alphabet
         textField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
         return textField
     }()
@@ -48,29 +47,16 @@ class InputLettersView: UIView {
         stackView.spacing = 20
         return stackView
     }()
-    
-    private lazy var keyboardManager: KeyboardManager = {
-        let manager = KeyboardManager()
-        manager.delegate = self
-        return manager
-    }()
-    
-    
+        
     //MARK:- Initializer
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupViews()
-        keyboardManager.registerNotifications()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    deinit {
-        keyboardManager.removeNotifications()
-    }
-    
 }
 
 //MARK:- UIButton Actions
@@ -100,7 +86,8 @@ extension InputLettersView: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return textField.resignFirstResponder()
+        textField.resignFirstResponder()
+        return true
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -134,26 +121,5 @@ extension InputLettersView: ViewCodable {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
-    }
-}
-
-//MARK:- KeyboardManagerDelegate
-extension InputLettersView: KeyboardManagerDelegate {
-    func keyboardChangeState(_ frame: CGRect) {
-        DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear) {
-                let constraint = self.superview?.constraints.first(where: {
-                    $0.firstItem is InputLettersView && $0.firstAttribute == .bottom
-                })
-                
-                if self.keyboardManager.state == .isShowing {
-                    constraint?.constant -= frame.height
-                } else {
-                    constraint?.constant += frame.height
-                }
-                
-                self.superview?.layoutIfNeeded()
-            }
-        }
     }
 }

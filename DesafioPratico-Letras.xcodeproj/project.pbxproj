@@ -42,6 +42,7 @@
 		A42FCFC825680B7500547200 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = A42FCFC725680B7500547200 /* ReferenceImages */; };
 		A42FCFCE25680C8B00547200 /* LettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCFCD25680C8B00547200 /* LettersView.swift */; };
 		A42FCFD225680EDE00547200 /* LettersViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FCFD125680EDE00547200 /* LettersViewSpec.swift */; };
+		A483ECA2256C8E0F00207C93 /* ViewPositionChangeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A483ECA1256C8E0F00207C93 /* ViewPositionChangeable.swift */; };
 		E583D8C8067EF6DF8D060EF3 /* Pods_DesafioPratico_Letras.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5822F44A2CED4A9D373BE1AE /* Pods_DesafioPratico_Letras.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		A42FCFC725680B7500547200 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
 		A42FCFCD25680C8B00547200 /* LettersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersView.swift; sourceTree = "<group>"; };
 		A42FCFD125680EDE00547200 /* LettersViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersViewSpec.swift; sourceTree = "<group>"; };
+		A483ECA1256C8E0F00207C93 /* ViewPositionChangeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPositionChangeable.swift; sourceTree = "<group>"; };
 		AC5E33310F80C365A5E42BAE /* Pods-DesafioPratico-Letras.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPratico-Letras.release.xcconfig"; path = "Target Support Files/Pods-DesafioPratico-Letras/Pods-DesafioPratico-Letras.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -336,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				A40D1CFD256AD20E00D8672A /* KeyboardManager.swift */,
+				A483ECA1256C8E0F00207C93 /* ViewPositionChangeable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				A42FCF512567E19200547200 /* AppDelegate.swift in Sources */,
 				A40D1CD325698F9000D8672A /* GameService.swift in Sources */,
 				A40D1C932569628400D8672A /* DataService.swift in Sources */,
+				A483ECA2256C8E0F00207C93 /* ViewPositionChangeable.swift in Sources */,
 				A40D1CC025698AFB00D8672A /* String+Extensions.swift in Sources */,
 				A42FCF702567E5B500547200 /* InputLettersView.swift in Sources */,
 				A42FCF782567E93500547200 /* HomeViewController.swift in Sources */,
