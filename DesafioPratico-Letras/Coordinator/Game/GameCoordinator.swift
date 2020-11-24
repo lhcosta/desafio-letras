@@ -9,24 +9,30 @@ import UIKit
 
 class GameCoordinator: Coordinator {
     
-    var currentViewController: UIViewController?
+    //MARK:- Properties
+    weak var parentCoordinator: Coordinator?
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     private let word: String
     
+    //MARK:- Initializer
     init(navigationController:  UINavigationController = UINavigationController(), with word: String) {
         self.navigationController = navigationController
         self.word = word
     }
     
+    //MARK:- Methods
     func start() {
         let viewController = GameViewController(viewModel: GameViewModel(word: word,
                                                                          gameService: GameService(dataService: DataService())))
-        currentViewController = viewController
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }
-        
+    
+    func didFinishPlaying() {
+        parentCoordinator?.childDidFinish(self)
+    }
+    
 }
 
 
