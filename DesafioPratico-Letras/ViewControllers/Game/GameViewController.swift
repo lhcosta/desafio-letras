@@ -109,7 +109,7 @@ extension GameViewController {
         var text: String {
             switch self {
             case .notFoundWordAlertText:
-                return "Nenhuma palavra foi encotrada com as letras fornecidas"
+                return "Nenhuma palavra foi encontrada com as letras fornecidas"
             case .notFoundWordAlertTitle:
                 return "Palavra não encontrada"
             case .notFoundWordAlertAction:
