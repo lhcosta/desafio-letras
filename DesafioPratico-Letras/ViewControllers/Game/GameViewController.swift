@@ -9,9 +9,17 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    //MARK:- Properties
     weak var coordinator: GameCoordinator?
     private let viewModel: GameViewModel
     
+    lazy var keyboardManager: KeyboardManager = {
+        let manager = KeyboardManager()
+        manager.delegate = self
+        return manager
+    }()
+    
+    //MARK:- Initializer
     init(viewModel: GameViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -25,6 +33,7 @@ class GameViewController: UIViewController {
         view as! GameView
     }
     
+    //MARK:- View lifecycle
     override func loadView() {
         super.loadView()
         view = GameView()
@@ -33,12 +42,19 @@ class GameViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateAnswer()
+        keyboardManager.registerNotifications()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupClosures()
         setupNavigation()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        coordinator?.didFinishPlaying()
+        keyboardManager.removeNotifications()
     }
     
 }
@@ -49,10 +65,13 @@ private extension GameViewController {
     func updateAnswer() {
         viewModel.fetchAnswer { [weak self] in
             DispatchQueue.main.async {
-                guard let answer = self?.viewModel.answer else { return }
-                self?.gameView.point = answer.point
-                self?.gameView.word = answer.word
-                self?.gameView.overLetters = answer.overLetters.joined()
+                if let answer = self?.viewModel.answer {
+                    self?.gameView.point = answer.point
+                    self?.gameView.word = answer.word
+                    self?.gameView.overLetters = answer.overLetters.joined()
+                } else {
+                    self?.showNotFoundWordAlert()
+                }
             }
         }
     }
@@ -66,7 +85,48 @@ private extension GameViewController {
     
     func setupNavigation() {
         navigationController?.navigationBar.tintColor = .white
-        navigationItem.title = "Monta Palavras"
-        navigationItem.hidesBackButton = true
+        navigationItem.title = Texts.navigationTitle.text
     }
+    
+    func showNotFoundWordAlert() {
+        let alert = UIAlertController(title: Texts.notFoundWordAlertTitle.text,
+                                      message: Texts.notFoundWordAlertText.text,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Texts.notFoundWordAlertAction.text, style: .default))
+        present(alert, animated: true)
+    }
+}
+
+
+//MARK:- Texts
+extension GameViewController {
+    enum Texts {
+        case notFoundWordAlertTitle
+        case notFoundWordAlertText
+        case notFoundWordAlertAction
+        case navigationTitle
+        
+        var text: String {
+            switch self {
+            case .notFoundWordAlertText:
+                return "Nenhuma palavra foi encotrada com as letras fornecidas"
+            case .notFoundWordAlertTitle:
+                return "Palavra não encontrada"
+            case .notFoundWordAlertAction:
+                return "OK"
+            case .navigationTitle:
+                return "Monta Palavras"
+            }
+        }
+        
+    }
+}
+
+//MARK:- ViewPositionChangeable
+extension GameViewController: ViewPositionChangeable {
+    var viewConstraint: NSLayoutConstraint? {
+        gameView.constraints.first(where: { $0.firstItem is InputLettersView && $0.firstAttribute == .bottom })
+    }
+
+    var valueConstraintConstant: CGFloat { -10 }
 }

@@ -18,16 +18,19 @@ protocol KeyboardManagerDelegate: AnyObject {
 
 class KeyboardManager: NSObject {
     
+    //MARK:- Properties
     var state: KeyboardState = .isHidden
     weak var delegate: KeyboardManagerDelegate?
     
+    //MARK:- Methods
     func registerNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func removeNotifications() {
-        NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc private func keyboardWillShow(notification: NSNotification) {
