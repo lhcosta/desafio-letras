@@ -34,5 +34,15 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertTrue(result.overElements.isEmpty)
     }
     
+    func testPerformaceFindWord() {
+                
+        let word = "Banana"
+        let letters = String(repeating: "mandar", count: 3000).appending("bnanaa")
+        
+        measure {
+            _ = word.containsAllLetters(in: letters)
+        }
+    }
+    
 
 }
